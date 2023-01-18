@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <title>MONEYVEST | BET</title>
+    <link rel="stylesheet" href="nulling-style.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style-personal-playground.css">
+    <link rel="shortcut icon" href="images/icon.png">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__container _container">
+                <a class="title" href="/trade">
+                    <div class="crypto">MONEY</div>
+                    <div class="pro">VEST</div>
+                </a>
+                <div class="right">
+                    <div class="e-mail">
+                        <div class="text">...</div>
+                        <div class="arrow"><img src="images/arrow-to-down.png" alt="icon"></div>
+
+                        <div class="top_menu">
+                            <a href="/deposit" class="top_item">Пополнить</a>
+                            <a href="/withdraw" class="top_item">Вывести</a>
+                            <a href="/account" class="top_item">Личный кабинет</a>
+                            <div class="top_item" id="exit">Выйти</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main__container _container">
+                <div class="left-panel">
+                    <div class="instruments">
+                        <div class="box chosen" id="FX:EURUSD">
+                            <div class="top">
+                                <div class="name">EUR/USD</div>
+                                <!-- <div class="price">1.12745</div>
+                                <div class="variable">0.41%</div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="left">EURUSD</div>
+                                <!-- <div class="right">Умный Выбор</div> -->
+                            </div>
+                        </div>
+
+                        <div class="box" id="FX:EURGBP">
+                            <div class="top">
+                                <div class="name">EUR/GBP</div>
+                                <!-- <div class="price">1.12745</div>
+                                <div class="variable">0.41%</div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="left">EURGBP</div>
+                                <!-- <div class="right">Умный Выбор</div> -->
+                            </div>
+                        </div>
+                        <div class="box" id="FX:EURAUD">
+                            <div class="top">
+                                <div class="name">EUR/AUD</div>
+                                <!-- <div class="price">1.12745</div>
+                                <div class="variable">0.41%</div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="left">EURAUD</div>
+                                <!-- <div class="right">Умный Выбор</div> -->
+                            </div>
+                        </div>
+                        <div class="box" id="FX:EURCHF">
+                            <div class="top">
+                                <div class="name">EUR/CHF</div>
+                                <!-- <div class="price">1.12745</div>
+                                <div class="variable">0.41%</div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="left">EURCHF</div>
+                                <!-- <div class="right">Умный Выбор</div> -->
+                            </div>
+                        </div>
+                        <div class="box" id="FX:GBPAUD">
+                            <div class="top">
+                                <div class="name">GBP/AUD</div>
+                                <!-- <div class="price">1.12745</div>
+                                <div class="variable">0.41%</div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="left">GBPAUD</div>
+                                <!-- <div class="right">Умный Выбор</div> -->
+                            </div>
+                        </div>
+                        <div class="box" id="FX:GBPCHF">
+                            <div class="top">
+                                <div class="name">GBP/CHF</div>
+                                <!-- <div class="price">1.12745</div>
+                                <div class="variable">0.41%</div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="left">GBPCHF</div>
+                                <!-- <div class="right">Умный Выбор</div> -->
+                            </div>
+                        </div>
+                        <div class="box" id="FX:AUDCHF">
+                            <div class="top">
+                                <div class="name">AUD/CHF</div>
+                                <!-- <div class="price">1.12745</div>
+                                <div class="variable">0.41%</div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="left">AUDCHF</div>
+                                <!-- <div class="right">Умный Выбор</div> -->
+                            </div>
+                        </div>
+
+                        <div class="box" id="BINANCE:ETHUSDT">
+                            <div class="top">
+                                <div class="name">ETH/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Ethereum</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:XRPUSDT">
+                            <div class="top">
+                                <div class="name">XRP/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Ripple</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:DOGEUSDT">
+                            <div class="top">
+                                <div class="name">DOGE/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Dogecoin</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:SHIBUSDT">
+                            <div class="top">
+                                <div class="name">SHIB/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Shiba Inu coin</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:MATICUSDT">
+                            <div class="top">
+                                <div class="name">MATIC/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Polygon</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:1INCHUSDT">
+                            <div class="top">
+                                <div class="name">1INCH/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">1inch</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:TRXUSDT">
+                            <div class="top">
+                                <div class="name">TRX/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Tron</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:TWTUSDT">
+                            <div class="top">
+                                <div class="name">TWT/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Trust Wallet Token</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:ADAUSDT">
+                            <div class="top">
+                                <div class="name">ADA/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Cardano</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:DOTUSDT">
+                            <div class="top">
+                                <div class="name">DOT/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Polkadot</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:ATOMUSDT">
+                            <div class="top">
+                                <div class="name">ATOM/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Cosmos</div>
+                            </div>
+                        </div>
+                        <div class="box" id="COINEX:TONUSDT">
+                            <div class="top">
+                                <div class="name">TON/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Toncoin</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:NEARUSDT">
+                            <div class="top">
+                                <div class="name">NEAR/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">NEAR Protocol</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:NEOUSDT">
+                            <div class="top">
+                                <div class="name">NEO/USDT</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">Neo</div>
+                            </div>
+                        </div>
+                        
+
+
+
+                        <div class="box" id="TVC:GOLD">
+                            <div class="top">
+                                <div class="name">GOLD</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">GOLD</div>
+                            </div>
+                        </div>
+                        <div class="box" id="TVC:SILVER">
+                            <div class="top">
+                                <div class="name">SILVER</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">SILVER</div>
+                            </div>
+                        </div>
+                        <div class="box" id="AMEX:OIL">
+                            <div class="top">
+                                <div class="name">OIL</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">OIL</div>
+                            </div>
+                        </div>
+                        <div class="box" id="MIL:PHIA">
+                            <div class="top">
+                                <div class="name">PHILIPS</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">PHIA</div>
+                            </div>
+                        </div>
+                        <div class="box" id="NASDAQ:GOOGL">
+                            <div class="top">
+                                <div class="name">ALPHABET</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">GOOGL</div>
+                            </div>
+                        </div>
+                        <div class="box" id="NYSE:SONY">
+                            <div class="top">
+                                <div class="name">SONY</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">SONY</div>
+                            </div>
+                        </div>
+
+                        <div class="box" id="IDX:COAL">
+                            <div class="top">
+                                <div class="name">COAL</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">COAL</div>
+                            </div>
+                        </div>
+                        <div class="box" id="NASDAQ:AAPL">
+                            <div class="top">
+                                <div class="name">Pfizer</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">AAPL</div>
+                            </div>
+                        </div>
+
+                        <div class="box" id="NASDAQ:TSLA">
+                            <div class="top">
+                                <div class="name">TESLA</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">TSLA</div>
+                            </div>
+                        </div>
+                        <div class="box" id="NYSE:IBM">
+                            <div class="top">
+                                <div class="name">IBM</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">IBM</div>
+                            </div>
+                        </div>
+                        <div class="box" id="NASDAQ:AAPL">
+                            <div class="top">
+                                <div class="name">APPLE</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">AAPL</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BINANCE:BTCUSDT">
+                            <div class="top">
+                                <div class="name">Bitcoin</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">BTCUSDT</div>
+                            </div>
+                        </div>
+                        <div class="box" id="BITTREX:GOOGLUSD">
+                            <div class="top">
+                                <div class="name">GOOGLE</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">GOOGLUSD</div>
+                            </div>
+                        </div>
+                        <div class="box" id="NASDAQ:MSFT">
+                            <div class="top">
+                                <div class="name">Microsoft</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">MSFT</div>
+                            </div>
+                        </div>
+                        <div class="box" id="NASDAQ:PEP">
+                            <div class="top">
+                                <div class="name">Pepsico</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">PEP</div>
+                            </div>
+                        </div>
+                        <div class="box" id="KRX:005930">
+                            <div class="top">
+                                <div class="name">Samsung</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">005930</div>
+                            </div>
+                        </div>
+                        <div class="box" id="NASDAQ:AMZN">
+                            <div class="top">
+                                <div class="name">Amazon</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">AMZN</div>
+                            </div>
+                        </div>
+                        <div class="box" id="NYSE:MCD">
+                            <div class="top">
+                                <div class="name">McDonald's</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">MCD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="currency-chart">
+                    <div class="top">
+                        <div class="left">
+                            <div class="top">EURUSD</div>
+                            <!-- <div class="bottom">EUR/USD</div> -->
+                        </div>
+                        <div class="right">
+                            <!-- <div class="price">
+                                <div class="top">0.98551</div>
+                            <div class="bottom">Цена продажи</div>
+                            </div>
+                            <div class="variable">
+                                <div class="top">0.70%</div>
+                            <div class="bottom">Последние 24 часа</div>
+                            </div> -->
+                            <div id="down" class="sell trade">
+                                <div class="icon"></div>
+                                <div class="text">Продать</div>
+                            </div>
+                            <div id="up" class="buy trade">
+                                <div class="icon"></div>
+                                <div class="text">Купить</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image chart">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div id="tradingview_0a660"></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            <script type="text/javascript">
+                                const options = {
+                                    "width": 980,
+                                    "height": 610,
+                                    "symbol": "FX:EURUSD",
+                                    "interval": "15",
+                                    "timezone": "Europe/Moscow",
+                                    "theme": "dark",
+                                    "style": "1",
+                                    "locale": "ru",
+                                    "toolbar_bg": "#f1f3f6",
+                                    "enable_publishing": false,
+                                    "hide_legend": true,
+                                    "allow_symbol_change": true,
+                                    "container_id": "tradingview_0a660"
+                                }
+
+                                new TradingView.widget(options);
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+
+                    <div class="history instruments">
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer__container _container">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="common.js"></script>
+<script src="main2.js"></script>
+</html>
