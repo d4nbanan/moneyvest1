@@ -351,19 +351,19 @@
                     </div>
                     <div class="reviews__list">
                         <div class="item">
-                            <video preload="auto" autoplay src="videos/review1.mp4">
+                            <video preload="auto" poster="videos/review1.png" src="videos/review1.mp4">
                         </div>
                         <div class="item">
-                            <video preload="auto" autoplay src="videos/review2.mp4">
+                            <video preload="auto" poster="videos/review2.png" src="videos/review2.mp4">
                         </div>
                         <div class="item">
-                            <video preload="auto" autoplay src="videos/review3.mp4">
+                            <video preload="auto" poster="videos/review3.png" src="videos/review3.mp4">
                         </div>
                         <div class="item">
-                            <video preload="auto" autoplay src="videos/review4.mp4">
+                            <video preload="auto" poster="videos/review4.png" src="videos/review4.mp4">
                         </div>
                         <div class="item">
-                            <video preload="auto" autoplay src="videos/review5.mp4">
+                            <video preload="auto" poster="videos/review5.png" src="videos/review5.mp4">
                         </div>
                     </div>
                 </div>
@@ -402,6 +402,15 @@
 </body>
 <script src="common.js"></script>
 <script src="main.js"></script>
+
+<script>
+    document.querySelectorAll("video").forEach(video => {
+        console.log(video)
+        video.onload = e => {
+            console.log(e.target)
+        }
+    })
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
