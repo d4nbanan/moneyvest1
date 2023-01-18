@@ -892,3 +892,10 @@ input{
 .support_widget .social:nth-child(3) img{
     filter: contrast(2);
 }
+
+
+@media screen and (max-width: 719px){
+    .section__text{
+        padding-left: 0px;
+    }
+}
