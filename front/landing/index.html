@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="landing/css/nulling-style.css">
+		<link rel="stylesheet" href="landing/css/select.css">
+		<link rel="stylesheet" href="landing/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:700,700italic" rel="stylesheet" />
+		<link href='landing/fonts-Mont/stylesheet.css' rel="stylesheet" type="text/css">
+		<title>Стилизайция и отправка формы</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<img class="wrapper__planet" src="landing/img/planet.png">
+			<img class="wrapper__arm" src="landing/img/arm.png">
+			<div class="header">
+				<div class="header__container _container">
+					<a class="logo">
+						<div class="logo__left">MONEY</div>
+						<div class="logo__rigth">VEST</div>
+					</a>
+				</div>
+			</div>
+			<div class="title _container">
+				<h1>Инвестиции в мировые компании</h1>
+				<span>с прибылью до 40 %</span>
+			</div>
+			<div class="section _container">
+				<div class="section__container">
+					<div class="section__images-wrapper">
+						<div class="section__images">
+							<img src="landing/img/simple.png" alt="img">
+						</div>
+						<div class="section__bonus">
+							<span class="number">50 $</span>
+							<span class="text">за регистрацию</span>
+							<div class="wrapper__bitkoin">
+								<div class="bitkoin__body">
+									<img class="bitkoin__item" src="landing/img/bitkoin.png">
+									<img class="bitkoin__coins" src="landing/img/coins.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form">
+						<form action="#" id="form" class="form__body">
+							<div class="form__title">
+								<h1>Оставьте свои контакты</h1>
+								<span>с вами свяжется наш менеджер</span>
+							</div>
+							<div class="form__item">
+								<label for="formName" class="form__label">ФИО*:</label>
+								<input id="formName" type="text" name="name" class="form__input _req">
+							</div>
+							<div class="form__item">
+								<label for="formEmail" class="form__label">E-mail*:</label>
+								<input id="formEmail" type="text" name="email" class="form__input _req _email">
+							</div>
+							<div class="form__item">
+								<label for="formEmail" class="form__label">Номер телефона*:</label>
+								<input id="formNumber" type="number" name="number" class="form__input _req _number">
+							</div>
+							<div class="form__item">
+								<div class="form__label">Выберите страну:</div>
+								<select name="countries" class="form__select" id="countries">						  
+								</select>
+							</div>
+							<div class="form__item">
+							<button type="submit" class="form__button">Начать зарабатывать</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="instruction">
+				<div class="background__wrapper">
+					<div class="background"><img src="landing/img/background.jpg'></div>
+				</div >
+				<div class="instruction__container _container">
+					<div class="instruction__body">
+						<div class="advantages">
+							<div class="background-left__wrapper">
+								<div class="background-left">
+									<img class="left-background" src="landing/img/left-background.png">
+								</div>
+							</div>
+							<div class="background-right__wrapper">
+								<div class="background-right">
+									<img class="right-background" src="landing/img/right-background.png">
+								</div>
+							</div >
+							<div class="advantages__title">Доступ к акциям
+								<span>Просто. Быстро. Бесплатно</span>
+							</div>
+							<img class="planet" src="landing/img/planet2.png">
+							<img class="bitkoin2" src="landing/img/bitkoin2.png">
+							<img class="man" src="landing/img/man.png">
+						</div>
+						<div class="instruction__item">
+							<div class="instruction__title">
+								<h1>Как стабильно получать<span class='h1__span'>20-40%</span></h1>
+								<span>от инвестиций в бизнес-проекты ?</span>
+							</div>
+							<div class="diagram">
+								<canvas id="diagram" width="1180" height="400"></canvas>
+								<div class="request__wrapper"><img class="request" src="landing/img/request.png" alt="img"></div>
+								<div class="briefcase__wrapper"><img class="briefcase" src="landing/img/briefcase.png" alt="img"></div>
+								<div class="phone__wrapper"></div><img class="phone" src="landing/img/phone.png" alt="img">
+								<div class="income__wrapper"></div><img class="income" src="landing/img/income.png" alt="img">
+							</div>
+							<div class="request-mobile">Оставьте заявку</div>
+							<div class="briefcase-mobile">Соберите ивестиционный портфель совместно с аналитиком</div>
+							<div class="phone-mobile">Мы проконсультируем вас по телефону</div>
+							<div class="income-mobile">Получите доход</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="landing/js/script.js"></script>
+		<script src="landing/js/select.js"></script>
+	</body>
+</html>

@@ -1,0 +1,724 @@
+
+
+body{
+    min-width: 340px;
+    font-size: 18px;
+    font-family: 'Mont', sans-serif;
+    box-sizing: border-box;
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+._container{
+    max-width: 1180px;
+	margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: content-box;
+}
+
+.wrapper{
+	position: relative;
+    min-height: 100%;
+	overflow: hidden;
+}
+
+/* ------------------ */
+
+.wrapper__planet{
+	position: absolute;
+	top: -100px;
+	left: 0;
+	width: 500px;
+	transform: rotate(45deg);
+}
+@media (min-width: 700px) {
+	.wrapper__arm {
+		position: absolute;
+		top: 60px;
+		right: 0;
+		width: 200px;
+		filter: hue-rotate(30deg);
+	}
+	.wrapper__bitkoin {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 160px;
+	}
+	.bitkoin__body {
+		position: relative;
+	}
+	.bitkoin__item{
+		width: 100%;
+	}
+	.bitkoin__coins{
+		width: 70px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	
+}
+.header{
+    width: 100%;
+	background-color: #333371;
+}
+.logo {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    font-size: 32px;
+    font-weight: 700;
+    align-items: center;
+    gap: 7px;
+    font-style: italic;
+}
+
+.logo__right:first-letter{
+    font-weight: 600;
+}
+
+.logo__left{
+    font-style: normal;
+}
+.title {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.title h1{
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 120%;
+}
+.title span{
+	font-size: 24px;
+	line-height: 120%;
+	font-weight: 600;
+	color: #03CB26;
+}
+
+.section__container{
+    display: inline-flex;
+    justify-content: center;
+	align-items: center;
+    width: 100%;
+}
+
+.section__images-wrapper {
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+	gap: 10px;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__images {
+    max-width: 540px;
+	width: 100%;
+}
+
+.section__images img{
+    width: 100%;
+}
+.section__bonus {
+	position: relative;
+	font-size: 28px;
+}
+.number {
+	color: #03CB26;
+}
+
+.form {
+    width: 100%;
+}
+
+.form * {
+	outline: none;
+}
+
+.form__body {
+	position: relative;
+	background-color: #232C4D;
+	padding: 20px 30px 30px 30px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.form__body::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../img/loading.gif") center / 50px no-repeat;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+.form__body._sending::after {
+	opacity: 1;
+	visibility: visible;
+}
+
+.form__title {
+	margin: 0 auto;
+	max-width: 360px;
+	font-weight: 600;
+}
+.form__title h1{
+	font-size: 28px;
+	line-height: 120%;
+}
+.form__title span{
+	font-size: 21px;
+	line-height: 120%;
+}
+.form__item {
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	height: 73px;
+}
+.form__item:nth-child(3){
+	position: relative;
+	height: 73px;
+}
+.form__label {
+	font-size: 18px;
+	display: block;
+	margin: 0px 0px 10px 0px;
+}
+.form__input {
+	height: 40px;
+	padding: 0px 14px;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 18px;
+	transition: all 0.5s ease 0s;
+	background-color: #e8f0fe;
+}
+
+.form__input:focus {
+	border: 1px solid #03CB26;
+	box-shadow: 0 0 3px #03CB26;
+}
+.form__input._error {
+	border: 1px solid red;
+	box-shadow: 0 0 3px red;
+}
+
+textarea.form__input {
+	min-height: 120px;
+	resize: vertical;
+	padding: 20px;
+}
+
+.form__select {
+	padding: 20px;
+}
+
+.form__button {
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60px;
+	background-color: #7a956b;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
+	cursor: pointer;
+	border-radius: 20px;
+	box-shadow: 0 5px 0 #161b13;
+	transition: background-color 0.5s ease 0s;
+	position: relative;
+	top: 0;
+}
+.form__button:hover {
+	background-color: #4f6146;
+}
+.form__button:active {
+	top: 3px;
+	box-shadow: 0 2px 0 #161b13;
+}
+
+@media (min-width: 1000px) {
+	.form {
+		padding: 0 50px;
+		max-width: 50%;
+	}
+}
+@media (max-width: 999px) {
+	.form {
+		padding: 60px 0;
+		max-width: 450px;
+	}
+	.section__container{
+		flex-direction: column;
+	}
+	.wrapper__arm {
+		top: 480px;
+	}
+	.wrapper__planet{
+		top: -60px;
+		max-width: 400px;
+		width: 100%;
+	}
+	.section__images-wrapper {
+		max-width: 450px;
+	}
+}
+@media (max-width: 700px) {
+	._container{
+        padding-left: calc(10px + 10 * ((100vw - 340px) / (700 - 340)));
+        padding-right: calc(10px + 10 * ((100vw - 340px) / (700 - 340)));
+    }
+	.logo{
+		font-size: 22px;
+		gap: 4px;
+	}
+	.wrapper__arm {
+		display: none;
+	}
+	.wrapper__planet{
+		top: -50px;
+		width: 300px;
+	}
+
+	
+}
+@media (max-width: 500px) {
+	.title h1 {
+		font-size: 28px;
+	}
+	.title span {
+		font-size: 22px;
+	}
+	.section__bonus {
+		font-size: 24px;
+	}
+	.form__body {
+		padding: 14px 10px 10px 10px;
+		gap: 16px;
+	}
+	.form__title {
+		margin: 0 auto;
+		max-width: 360px;
+		font-weight: 600;
+	}
+	.form__title h1{
+		font-size: 22px;
+		line-height: 100%;
+	}
+	.form__title span{
+		font-size: 16px;
+	}
+	.form__label {
+		font-size: 16px;
+	}
+	.form__button {
+		margin-top: 10px;
+		min-height: 50px;
+		font-size: 16px;
+	}
+}
+/*________________________________________________________________________*/
+
+.instruction {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.background__wrapper {
+	filter: blur(2px);
+	position: absolute;
+	z-index: 0;
+	bottom: 0;
+	left: 50%;
+	width: 100%;
+}
+.background {
+    filter: hue-rotate(-55deg);
+}
+.background > img{
+	width: 140%;
+	transform: translate(-50%, 0px);
+	object-fit: cover;
+	object-position: center;
+    filter: invert(1);
+	min-height: 500px;
+	height: 100%;
+}
+.instruction__container {
+	z-index: 2;
+	width: 100%;
+}
+.instruction__body{
+	padding-top: 180px;
+	transform: translate(0, 0);
+	position: relative;
+}
+.advantages{
+	margin: 0 auto;
+	max-width: 500px;
+	max-height: 400px;
+}
+
+.background-left__wrapper {
+	filter: blur(2px);
+	width: 150px;
+	position: absolute;
+	left: 0;
+	top: 400px;
+}
+.background-left {
+	filter: hue-rotate(-55deg);
+}
+
+.background-right__wrapper {
+	filter: blur(2px);
+	width: 150px;
+	position: absolute;
+	right: 0;
+	top: 400px;
+}
+.background-right {
+	filter: hue-rotate(-55deg);
+}
+.left-background {
+	filter: invert(1);
+	object-fit: cover;
+	width: 100%;
+}
+.right-background {
+	object-position: -4px top;
+    border-radius: 26%;
+	object-fit: cover;
+	filter: invert(1);
+	width: 100%;
+}
+.planet {
+	position: absolute;
+	width: 368px;
+	object-fit: cover;
+	object-position: center;
+	transform: translate(44%, -62%) rotate(-147deg);
+}
+.advantages .bitkoin2{
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	transform: translate(0, -32%);
+}
+.advantages .man{
+	width: 77px;
+	object-fit: cover;
+	object-position: center;
+	transform: translate(164%, -236%);
+}
+
+.advantages__title {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+	border-left: #03CB26 2px solid;
+	padding-left: 10px;
+}
+.instruction__title{
+	text-align: center;
+	font-weight: 600;
+	transform: translate(0, 30px);
+}
+.instruction__title h1{
+    font-size: 36px;
+	font-weight: 600;
+}
+.instruction__title .h1__span {
+	color: #03CB26;
+	padding-left: 8px;
+	font-size: 36px;
+	font-weight: 600;
+}
+.instruction__title span{
+    font-size: 32px;
+}
+
+@media (min-width: 701px) {
+	.diagram{
+		padding: 160px 0 300px 0;
+	}
+	.diagram img{
+		object-fit: cover;
+		position: absolute;
+	}
+	.request{
+		left: 23.5%;
+		top: 53%;
+		width: 52px;
+	}
+	.request__wrapper{
+		position: absolute;
+		left: 23.5%;
+		top: 53%;
+	}
+	.request__wrapper::after{
+		content: 'Оставьте заявку';
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.briefcase {
+		top: 49%;
+		right: 39.3%;
+		width: 60px;
+	}
+	.briefcase__wrapper{
+		position: absolute;
+		top: 49%;
+		right: 39.3%;
+	}
+	.briefcase__wrapper::after{
+		content: 'Соберите ивестиционный портфель совместно с аналитиком ';
+		position: absolute;
+	}
+	.phone {
+		bottom: 17%;
+		left: 40%;
+		width: 60px;
+	}
+	.phone__wrapper{
+		position: absolute;
+		bottom: 17%;
+		left: 40%;
+	}
+	.phone__wrapper::before{
+		content: 'Мы проконсультируем вас по телефону ';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.income {
+		bottom: 18%;
+		right: 24%;
+		width: 68px;
+	}
+	.income__wrapper{
+		position: absolute;
+		bottom: 18%;
+		right: 24%;
+	}
+	.income__wrapper::before{
+		content: 'Получите доход';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translate(0, 50%);
+	}
+	.diagram div::after{
+		padding: 0 20px;
+
+	}
+	.diagram div::before{
+		padding: 20px;
+		transform: translate(0, 20%);
+	}
+}
+
+
+@media (max-width: 900px) {
+	.background-left__wrapper {
+		display: none;
+	}
+	.background-right__wrapper {
+		display: none;
+	}
+}
+@media (max-width: 1180px) {
+	.background img{
+		width: 210%;
+	}
+	#diagram{
+		width: calc(700px + 480 * ((100vw - 700px) / (1180 - 700)));
+		min-height: 400px;
+	}
+	.background__wrapper {
+		filter: blur(0px);
+	}
+}
+
+@media (max-width: 999px) and (min-width: 701px) {
+	.form {
+		padding: 160px 0 0px 0;
+	}
+}
+
+@media (max-width: 700px) {
+	.instruction__title{
+		transform: translate(0px, 0px);
+		padding-right: 22px;
+	}
+	.instruction__title h1{
+		font-size: 26px;
+		font-weight: 600;
+	}
+	.instruction__title .h1__span {
+		color: #03CB26;
+		padding-left: 8px;
+		font-size: 26px;
+		font-weight: 600;
+		white-space:nowrap
+	}
+	.instruction__title span{
+		font-size: 18px;
+		white-space:nowrap
+	}
+
+	.background img{
+		width: 210%;
+	}
+	.diagram{
+		display: none;
+	}
+	.instruction__title{
+		transform: translate(0, 0);
+	}
+	.wrapper__bitkoin{
+		display: none;
+	}
+	.advantages{
+		transform: scale(0.8);
+		min-width: 500px;
+    	min-height: 400px;
+	}
+	.instruction__body{
+		padding-top: 50px;
+	}
+}
+
+
+
+@media (max-width: 500px) {
+
+	.instruction__body{
+		padding-top: 20px;
+	}
+	.advantages{
+		transform: scale(0.8) translate(-6%, 0);
+	}
+}
+@media (max-width: 450px) {
+	.advantages{
+		transform: scale(0.8) translate(-10%, 0);
+	}
+}
+@media (max-width: 420px) {
+	.advantages{
+		transform: scale(0.8) translate(-12%, 0);
+	}
+}
+@media (max-width: 400px) {
+	.advantages{
+		transform: scale(0.7) translate(-16%, 0);
+	}
+}
+@media (max-width: 375px) {
+	.advantages{
+		transform: scale(0.7) translate(-20%, 0);
+	}
+}
+@media (max-width: 360px) {
+	.advantages{
+		transform: scale(0.7) translate(-23%, 0);
+	}
+}
+
+@media (min-width: 701px) {
+	.request-mobile {
+		display: none;
+		padding-right: 22px;
+	}
+	.briefcase-mobile {
+		display: none;
+		padding-right: 22px;
+	}
+	.phone-mobile {
+		display: none;
+		padding-right: 22px;
+	}
+	.income-mobile {
+		display: none;
+		padding-right: 22px;
+	}
+}
+@media (max-width: 700px) {
+	.instruction__item{
+		padding-bottom: 150px;
+		margin-top: -40px;
+	}
+	.request-mobile {
+		padding: 22px 22px 22px 0;
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	.request-mobile:before {
+		content: url(../img/request.png);
+		display: inline-block;
+		transform: scale(0.7);
+	}
+	.briefcase-mobile {
+		padding: 22px 22px 22px 0;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		gap: 10px;
+		text-align: end;
+	}
+	.briefcase-mobile::after {
+		content: url(../img/briefcase.png);
+		display: inline-block;
+		transform: scale(0.7);
+	}
+	.phone-mobile {
+		padding: 22px 22px 22px 0;
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	.phone-mobile:before {
+		content: url(../img/phone.png);
+		display: inline-block;
+		transform: scale(0.7);
+	}
+	.income-mobile {
+		padding: 22px 22px 22px 0;
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		justify-content: end;
+	}
+	.income-mobile:after {
+		content: url(../img/income.png);
+		display: inline-block;
+		transform: scale(0.7);
+	}
+}

@@ -93,7 +93,22 @@ const start = async () => {
         app.post('/api/confirmTransaction', authMiddleware, isAdmin, confirmTransaction);
         app.get('/api/getAllTransactions', authMiddleware, getAllTransactions);
 
-
+        app.get('/landing', async (req, res) => {
+            try {
+                res.sendFile('landing/index.html', {root: path.join('./front')});
+            } catch (err) {
+                console.log(err);
+                res.sendStatus(400);
+            }
+        });
+        app.get('/landing/*', async (req, res) => {
+            try {
+                const filename = req.path;
+                res.sendFile(filename, {root: path.join('./front')});
+            } catch (e) {
+                res.status(404).send("file not found");
+            }
+        });
 
         app.get('/account', async (req, res) => {
             try {
