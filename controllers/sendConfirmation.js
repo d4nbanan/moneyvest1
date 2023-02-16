@@ -31,9 +31,10 @@ const transporter = nodemailer.createTransport({
 
 
 
-    host: "mail.privateemail.com",
-    secure: false,
-    port: 587,
+    // host: "mail.privateemail.com",
+    host: process.env.SMTP_HOST,
+    secure: true,
+    port: 465,
     auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD
@@ -111,5 +112,33 @@ const sendConfirmation = (to, link) => {
 }
 
 
+const sendContacts = (data) => {
+    const options = {
+        from: process.env.SMTP_USER,
+        to: process.env.sendContactsTo,
+        subject: `Запрос обратной связи MoneyVest`,
+        text: '',
+        html: `
+            <h1>Данные клиента</h1>
+            <div>
+                <p><strong>ФИО:</strong> ${data.fullName} </p>
+                <p><strong>E-mail:</strong> ${data.email} </p>
+                <p><strong>Номер телефона:</strong> ${data.phoneNumber} </p>
+                <p><strong>Страна:</strong> ${data.country} </p>
+            </div>
+        `
+    }
 
-module.exports = {sendConfirmation, sendPost};
+    transporter.sendMail(options, function (err, info) {
+        if(err) {
+            console.log(err)
+            return;
+        }
+
+        console.log(info.response);
+    });
+}
+
+
+
+module.exports = {sendConfirmation, sendPost, sendContacts};

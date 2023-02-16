@@ -7,8 +7,9 @@
 		<link rel="stylesheet" href="landing/css/select.css">
 		<link rel="stylesheet" href="landing/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:700,700italic" rel="stylesheet" />
-		<link href='landing/fonts-Mont/stylesheet.css' rel="stylesheet" type="text/css">
-		<title>Стилизайция и отправка формы</title>
+		<link href='fonts-Mont/stylesheet.css' rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="images/icon.png">
+		<title>Money Vest</title>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -58,16 +59,16 @@
 								<input id="formEmail" type="text" name="email" class="form__input _req _email">
 							</div>
 							<div class="form__item">
-								<label for="formEmail" class="form__label">Номер телефона*:</label>
+								<label for="formNumber" class="form__label">Номер телефона*:</label>
 								<input id="formNumber" type="number" name="number" class="form__input _req _number">
 							</div>
 							<div class="form__item">
 								<div class="form__label">Выберите страну:</div>
-								<select name="countries" class="form__select" id="countries">						  
+								<select name="countries" class="form__select" id="countries">
 								</select>
 							</div>
 							<div class="form__item">
-							<button type="submit" class="form__button">Начать зарабатывать</button>
+							<button type="submit" id="sendContacts" class="form__button">Начать зарабатывать</button>
 							</div>
 						</form>
 					</div>
@@ -75,7 +76,7 @@
 			</div>
 			<div class="instruction">
 				<div class="background__wrapper">
-					<div class="background"><img src="landing/img/background.jpg'></div>
+					<div class="background"><img src='landing/img/background.jpg'></div>
 				</div >
 				<div class="instruction__container _container">
 					<div class="instruction__body">
@@ -119,6 +120,7 @@
 			</div>
 		</div>
 		<script src="landing/js/script.js"></script>
+		<script src="landing/js/sendContacts.js"></script>
 		<script src="landing/js/select.js"></script>
 	</body>
 </html>

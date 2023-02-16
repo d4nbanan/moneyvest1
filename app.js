@@ -23,6 +23,7 @@ const getAllTransactions = require('./routes/getAllTransactions');
 const activate = require('./routes/activate');
 const bet = require('./routes/bet');
 const Bet = require('./schemas/Bet');
+const { sendContacts } = require('./controllers/sendConfirmation')
 
 app.use(express.json({limit: "50mb"}));
 app.use(cookieParser());
@@ -109,6 +110,34 @@ const start = async () => {
                 res.status(404).send("file not found");
             }
         });
+
+        app.post('/api/sendContacts', async(req, res) => {
+            try {
+                console.log(req.body)
+
+                const phoneNumber = req.body.phoneNumber;
+                const fullName = req.body.fullName;
+                const country = req.body.country;
+                const email = req.body.email;
+
+                if(!phoneNumber.length || !fullName || !country || !email) {
+                    res.status(400).send("error");
+                    return;
+                }
+
+                await sendContacts({
+                    phoneNumber,
+                    fullName,
+                    country,
+                    email
+                });
+                
+                return res.status(200).json({ message: "Mail sended" });
+            } catch (e) {
+                console.log(e)
+                res.status(400).send("error");
+            }
+        })
 
         app.get('/account', async (req, res) => {
             try {
